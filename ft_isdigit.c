@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberthai <mberthai@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jojomoon <jojomoon@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:25:55 by mberthai          #+#    #+#             */
-/*   Updated: 2021/01/27 12:36:13 by mberthai         ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 21:41:17 by jojomoon         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= 48 && c <= 57)
 		return (1);
 	return (0);
 }

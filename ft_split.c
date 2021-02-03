@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberthai <mberthai@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jojomoon <jojomoon@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:28:41 by mberthai          #+#    #+#             */
-/*   Updated: 2021/01/27 13:24:18 by mberthai         ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 19:50:53 by jojomoon         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ char		**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	a = tablen(s, c);
+	tab = NULL;
 	if (!(*tab = malloc(sizeof(char *) * a)))
 		return (NULL);
 	while (s[i])

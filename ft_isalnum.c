@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberthai <mberthai@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jojomoon <jojomoon@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:25:16 by mberthai          #+#    #+#             */
-/*   Updated: 2021/01/27 12:25:27 by mberthai         ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 21:25:34 by jojomoon         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isalnum(c))
+	if (ft_isalpha(c) || ft_isdigit(c))
 		return (1);
 	return (0);
 }

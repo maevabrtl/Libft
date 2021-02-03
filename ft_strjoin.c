@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberthai <mberthai@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jojomoon <jojomoon@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:29:11 by mberthai          #+#    #+#             */
-/*   Updated: 2021/01/27 13:25:49 by mberthai         ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 19:45:41 by jojomoon         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	l = (ft_strlen(s1) + ft_strlen(s2));
+	j = 0;
 	if (!(str = malloc(sizeof(char) * l)))
 		return (NULL);
 	while (i < l)

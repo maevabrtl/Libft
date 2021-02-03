@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberthai <mberthai@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jojomoon <jojomoon@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:25:06 by mberthai          #+#    #+#             */
-/*   Updated: 2021/01/27 12:35:12 by mberthai         ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 21:22:04 by jojomoon         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,9 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	size_t	tsize;
 
-	tsize = nmemb * size;
-	ptr = malloc(tsize);
-	if (tsize != 0)
-	{
-		ft_bzero(ptr, tsize);
-		return (ptr);
-	}
-	return (NULL);
+	if (!(ptr = malloc(nmemb * size)))
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }

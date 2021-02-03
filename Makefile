@@ -12,8 +12,6 @@
 
 NAME = libft.a
 
-LATER = ft_strrchr.c ft_strnstr.c ft_memccpy.c ft_strchr.c
-
 SRC = libft.h \
 ft_toupper.c \
 ft_tolower.c \
@@ -35,6 +33,7 @@ ft_memset.c \
 ft_memmove.c \
 ft_memcpy.c \
 ft_memcmp.c \
+ft_memccpy.c \
 ft_lstsize.c \
 ft_lstnew.c \
 ft_lstmap.c \
@@ -56,11 +55,12 @@ ft_atoi.c
 
 all: $(NAME)
 
-$(NAME): comp
-	ar -rcs $(NAME) $(SRC)
+$(NAME): $(SRC:.c=.o)
+	ar -rcs $(NAME) $(SRC:.c=.o)
+	ranlib $(NAME)
 
-comp:
-	gcc -Wall -Wextra -Werror -o $(NAME) $(SRC)
+%.o: %.c
+	gcc -c -Wall -Wextra -Werror -o $(NAME:.a=.h) $^ -o $@
 
 clean:
 	/bin/rm -f *.o

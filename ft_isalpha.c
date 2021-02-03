@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mberthai <mberthai@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: jojomoon <jojomoon@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/27 12:25:34 by mberthai          #+#    #+#             */
-/*   Updated: 2021/01/27 12:34:46 by mberthai         ###   ########lyon.fr   */
+/*   Updated: 2021/02/02 21:36:34 by jojomoon         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 101 && c <= 132) || (c >= 141 && c <= 172))
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);
 	return (0);
 }
